@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  api:
+    build:
+      context: .
+      dockerfile: PiggyPal.Api/Dockerfile
+    ports:
+      - "5000:80"
+    volumes:
+      - ./PiggyPal.Api/Uploads:/app/Uploads
+      - ./PiggyPal.Api/PiggyPal.db:/app/PiggyPal.db
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+  web:
+    build:
+      context: ./piggypal-web
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:5000
+    depends_on:
+      - api 

@@ -1,0 +1,8 @@
+
+.vs/
+
+PiggyPal.Api/bin/
+
+PiggyPal.Api/obj/
+
+PiggyPal.Api/appsettings.Development.json

@@ -1,0 +1,6 @@
+@PiggyPal.Api_HostAddress = http://localhost:5244
+
+GET {{PiggyPal.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
