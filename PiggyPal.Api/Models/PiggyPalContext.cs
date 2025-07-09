@@ -40,7 +40,7 @@ namespace PiggyPal.Api.Models
 
                 var parent = new Parent { Name = "Jane Smith", Email = "jane@smith.com", HouseholdId = household.Id };
                 db.Parents.Add(parent);
-                var kid = new Kid { Name = "Tommy Smith", HouseholdId = household.Id };
+                var kid = new Kid { Name = "Tommy Smith", HouseholdId = household.Id, ProfilePictureUrl = "" };
                 db.Kids.Add(kid);
                 db.SaveChanges();
 
